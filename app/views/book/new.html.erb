@@ -1,0 +1,18 @@
+<h1>Add New Book</h1>
+
+<%=form_tag  %>
+<div class="add">
+  <p><label for = "book_title">Title</label>:
+  <%= text_field 'books', 'title' %></p>
+  <p><label for = "book_price">Price</label>:
+
+  <%= text_field 'books', 'price' %></p>
+  <p><label for = "book_subject_id" style="margin-left: -49px;">Subject</label>:
+
+  <%= collection_select(:books, :subject_id, @subjects, :id, :name, prompt: true) %></p>
+  <p><label for = "book_description">Description</label><br/>
+
+  <%= text_area 'books', 'description' %></p>
+  <%= submit_tag 'create'%>
+<%=link_to 'Back', {:action => 'list'}%>
+</div>

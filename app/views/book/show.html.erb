@@ -1,0 +1,7 @@
+<h1> <%= @book.title %> </h1>
+
+<h2>Price:  <%= @book.price %></h2>
+<h2>Description <%= @book.description %></h2>
+<h2>Created Date:</strong> <%= @book.created_at %></br>
+
+<%=link_to 'Back', {:action => 'list'}%>
